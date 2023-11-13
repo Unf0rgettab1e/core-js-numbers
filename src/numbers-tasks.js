@@ -294,9 +294,11 @@ function getSumToN(n) {
 function getSumOfDigits(num) {
   let digits = num;
   let sum = 0;
-  while (digits % 10) {
+  let countOfDigits = Math.floor(Math.log10(digits)) + 1;
+  while (countOfDigits) {
     sum += digits % 10;
-    digits = Math.floor(num / 10);
+    countOfDigits -= 1;
+    digits = Math.floor(digits / 10);
   }
   return sum;
 }
@@ -313,7 +315,7 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return Number.isInteger(Math.sqrt(num));
+  return Number.isInteger(Math.log2(num));
 }
 
 /**
