@@ -621,7 +621,6 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  console.log(Math.round(number / 2 + 0.1), number);
   return Math.abs(Math.round(number / 2 + 0.1 * Math.sign(number)));
 }
 
