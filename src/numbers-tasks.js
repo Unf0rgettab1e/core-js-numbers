@@ -256,13 +256,17 @@ function getCube(num) {
  *   10 => 55
  */
 function getFibonacciNumber(index) {
-  if (index === 0) {
-    return 0;
-  }
-  if (index === 1) {
-    return 1;
-  }
-  return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
+  // if (index === 0) {
+  //   return 0;
+  // }
+  // if (index === 1) {
+  //   return 1;
+  // }
+  // return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
+  const sqrt5 = Math.sqrt(5);
+  return Math.trunc(
+    (((1 + sqrt5) / 2) ** index - ((1 - sqrt5) / 2) ** index) / sqrt5
+  );
 }
 
 /**
